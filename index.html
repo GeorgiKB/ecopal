@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoPal — Еко Палети от Слънчогледова Люспа | Суворово, България</title>
+  <meta name="description" content="EcoPal произвежда иновативни еко палети от слънчогледова люспа. 15 кг, товарност 5000 кг, без ISPM-15 обработка. Идеални за международен износ от България.">
+  <meta name="keywords" content="еко палети, палети слънчогледова люспа, еко палети българия, eco pallets bulgaria, sunflower husk pallets, биоразградими палети, палети износ, зелени палети">
+  <link rel="canonical" href="https://www.ecopal-bg.com/">
+  <link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/">
+  <link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ecopal-bg.com/">
+  <meta property="og:title" content="EcoPal — Еко Палети от Слънчогледова Люспа">
+  <meta property="og:description" content="Иновативни еко палети от 95% слънчогледова люспа. По-леки, по-издръжливи, без фитосанитарна обработка.">
+  <meta property="og:image" content="https://placehold.co/1200x630/F5C518/1A1814?text=EcoPal">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#F5C518',
+            'brand-dark': '#C9A100',
+            'brand-light': '#FEF9E0',
+            eco: '#4D7C5F',
+            surface: '#FFFFFF',
+            base: '#FDFCF5',
+            bdr: '#EDE9DE',
+            ink: '#1A1814',
+            muted: '#6B6455',
+          },
+          fontFamily: {
+            display: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            body: ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #FDFCF5;
+      color: #1A1814;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1,h2,h3,.display { font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+
+    /* Grain overlay */
+    .grain::after {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 1;
+    }
+
+    /* Navbar */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(253,252,245,0.9);
+      border-bottom: 1px solid rgba(237,233,222,0.7);
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Lang buttons */
+    .lang-btn {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
+      padding: 3px 9px; border-radius: 6px; cursor: pointer; border: none; background: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .lang-btn.active { background: #F5C518; color: #1A1814; }
+    .lang-btn:not(.active) { color: #3D3530; }
+    .lang-btn:not(.active):hover { background: #EDE9DE; color: #1A1814; }
+    .lang-btn:focus-visible { outline: 2px solid #F5C518; outline-offset: 2px; }
+
+    /* Buttons */
+    .btn-y {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: #F5C518; color: #1A1814; font-weight: 600; font-size: 0.9rem;
+      padding: 13px 26px; border-radius: 11px; border: none; cursor: pointer;
+      box-shadow: 0 3px 16px rgba(245,197,24,0.4);
+      transition: background 0.2s, transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .btn-y:hover { background: #E5B600; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(245,197,24,0.45); }
+    .btn-y:active { transform: translateY(0); }
+    .btn-y:focus-visible { outline: 3px solid #F5C518; outline-offset: 3px; }
+
+    .btn-o {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.12); color: #FFFFFF; font-weight: 600; font-size: 0.9rem;
+      padding: 12px 26px; border-radius: 11px; border: 1.5px solid rgba(255,255,255,0.7); cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, transform 0.2s;
+      text-decoration: none; backdrop-filter: blur(4px);
+    }
+    .btn-o:hover { border-color: #F5C518; background: rgba(245,197,24,0.15); color: #F5C518; transform: translateY(-1px); }
+    .btn-o:active { transform: translateY(0); }
+    .btn-o:focus-visible { outline: 3px solid #F5C518; outline-offset: 3px; }
+
+    /* Hero BG */
+    .hero-bg {
+      background:
+        radial-gradient(ellipse 70% 55% at 15% 45%, rgba(245,197,24,0.22) 0%, transparent 60%),
+        radial-gradient(ellipse 55% 45% at 85% 65%, rgba(245,197,24,0.10) 0%, transparent 55%),
+        radial-gradient(ellipse 90% 70% at 50% -10%, rgba(254,249,224,0.8) 0%, transparent 65%),
+        #FDFCF5;
+    }
+
+    /* Marquee */
+    .marquee-wrap { overflow: hidden; }
+    .marquee-track {
+      display: flex; gap: 0; width: max-content;
+      animation: scroll-x 28s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    .marquee-half { display: flex; align-items: center; gap: 2.5rem; padding-right: 2.5rem; }
+    @keyframes scroll-x {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* Scroll reveal */
+    .rev { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .rev.in { opacity: 1; transform: translateY(0); }
+    .rev-d1 { transition-delay: 0.08s; }
+    .rev-d2 { transition-delay: 0.16s; }
+    .rev-d3 { transition-delay: 0.24s; }
+    .rev-d4 { transition-delay: 0.32s; }
+
+    /* Card */
+    .card {
+      background: #fff; border-radius: 18px; border: 1px solid #EDE9DE;
+      box-shadow: 0 2px 6px rgba(26,24,20,0.05), 0 6px 20px rgba(26,24,20,0.04);
+      overflow: hidden;
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(245,197,24,0.18), 0 14px 36px rgba(26,24,20,0.08);
+    }
+
+    /* Adv card */
+    .acard {
+      background: #fff; border-radius: 16px; border: 1px solid #EDE9DE; padding: 1.75rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .acard:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(26,24,20,0.07); }
+
+    /* Icon box */
+    .ibox {
+      width: 42px; height: 42px; border-radius: 11px;
+      display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; flex-shrink: 0;
+    }
+    .ibox-y { background: rgba(245,197,24,0.13); }
+    .ibox-g { background: rgba(77,124,95,0.1); }
+
+    /* Badge */
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: rgba(77,124,95,0.1); color: #3A6348;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 100px;
+    }
+
+    /* Table rows */
+    .trow { display: grid; grid-template-columns: 2fr 1fr 1fr; align-items: center; padding: 14px 20px; border-bottom: 1px solid #EDE9DE; }
+    .trow:last-child { border-bottom: none; }
+    .trow:nth-child(even) { background: rgba(245,197,24,0.03); }
+    .yes { color: #3A6348; font-weight: 700; }
+    .no  { color: #B04040; }
+
+    /* Form */
+    .finput {
+      width: 100%; padding: 11px 14px; border: 1.5px solid #E0DAD0; border-radius: 9px;
+      font-size: 0.9rem; font-family: 'Montserrat', -apple-system, sans-serif; background: #fff; color: #1A1814; outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .finput:focus { border-color: #F5C518; box-shadow: 0 0 0 3px rgba(245,197,24,0.14); }
+    .finput::placeholder { color: #AAA095; }
+
+    /* Scroll dot */
+    .sdot-wrap { width: 22px; height: 34px; border: 2px solid rgba(26,24,20,0.2); border-radius: 11px; display: flex; justify-content: center; padding-top: 5px; }
+    .sdot { width: 3px; height: 7px; background: #F5C518; border-radius: 2px; animation: sdot 2s ease-in-out infinite; }
+    @keyframes sdot { 0%,100%{transform:translateY(0);opacity:1} 50%{transform:translateY(7px);opacity:0.3} }
+
+    /* Mobile menu — animated slide-down */
+    #mmenu {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.36s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.22s ease;
+    }
+    #mmenu.open { max-height: 480px; opacity: 1; }
+
+    /* Mobile nav links */
+    .mnav-link {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 0; color: #1A1814; font-weight: 600; font-size: 0.95rem;
+      text-decoration: none; border-bottom: 1px solid #F0EDE6;
+      transition: color 0.18s ease;
+    }
+    .mnav-link:last-of-type { border-bottom: none; }
+    .mnav-link:hover { color: #C9A100; }
+    .mnav-link:active { color: #C9A100; }
+    .mnav-link:focus-visible { outline: 2px solid #F5C518; outline-offset: 2px; }
+    .mnav-link svg { opacity: 0.35; transition: opacity 0.18s, transform 0.18s; }
+    .mnav-link:hover svg { opacity: 0.7; transform: translateX(3px); }
+
+    /* Reliable desktop/mobile show-hide (no inline-style conflicts) */
+    .nav-desktop     { display: none !important; }
+    .nav-desktop-btn { display: none !important; }
+    .nav-mobile      { display: flex !important; align-items: center; justify-content: center; }
+    @media (min-width: 768px) {
+      .nav-desktop     { display: flex !important; }
+      .nav-desktop-btn { display: inline-flex !important; }
+      .nav-mobile      { display: none !important; }
+    }
+
+    /* Hamburger → X animation */
+    .ham-line { transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.2s ease; transform-box: fill-box; transform-origin: center; }
+    #ham.open .ham-line-1 { transform: translateY(6px) rotate(45deg); }
+    #ham.open .ham-line-2 { opacity: 0; transform: scaleX(0); }
+    #ham.open .ham-line-3 { transform: translateY(-6px) rotate(-45deg); }
+
+    /* FAQ */
+    .faq-q:hover { background: rgba(245,197,24,0.04); }
+    .faq-q:focus-visible { outline: 2px solid #F5C518; outline-offset: -2px; }
+    .faq-a p { margin: 0; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #FDFCF5; }
+    ::-webkit-scrollbar-thumb { background: #D4C99A; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C9A100; }
+
+    /* ── MOBILE OPTIMIZATIONS ───────────────────────────────── */
+    @media (max-width: 767px) {
+      /* Navbar */
+      .nav-inner { height: 60px !important; padding: 0 16px !important; }
+      #navbar img[alt="EcoPal Logo"] { height: 44px !important; }
+      #hero { padding-top: 60px !important; }
+
+      /* Hero */
+      .hero-content { padding: 32px 20px 56px !important; }
+      .hero-heading { white-space: normal !important; font-size: clamp(1.75rem, 8vw, 2.5rem) !important; }
+      .hero-sub { font-size: 1.1rem !important; margin-bottom: 10px !important; }
+      .hero-cta-row { flex-direction: column !important; gap: 10px !important; }
+      .hero-cta-row .btn-y,
+      .hero-cta-row .btn-o { width: 100% !important; justify-content: center !important; box-sizing: border-box !important; }
+      .hero-stats { grid-template-columns: repeat(3, 1fr) !important; max-width: 100% !important; gap: 10px !important; }
+      .hero-stat-num { font-size: 1.45rem !important; }
+
+      /* Products section */
+      #products { padding: 52px 16px !important; }
+      .product-card { grid-template-columns: 1fr !important; }
+      .product-img-panel { min-height: 200px !important; padding: 20px 16px !important; }
+      .product-info-panel { padding: 22px 20px !important; }
+      .product-info-panel-r { order: 2 !important; }
+      .product-img-panel-r { order: 1 !important; }
+      .product-h3 { font-size: 1.7rem !important; }
+      .product-specs { margin-bottom: 20px !important; }
+      .product-info-panel p { font-size: 0.85rem !important; margin-bottom: 16px !important; }
+      .product-specs > div { padding: 10px 12px !important; }
+      .product-specs > div > div:first-child { font-size: 0.65rem !important; }
+      .product-specs > div > div:last-child { font-size: 0.9rem !important; }
+
+      /* Advantages */
+      #advantages { padding: 52px 16px !important; }
+
+      /* Industries */
+      .industries-section { padding: 52px 16px !important; background-attachment: scroll !important; }
+      #industries-heading { margin-bottom: 32px !important; }
+
+      /* Comparison */
+      #comparison { padding: 52px 16px !important; }
+      .trow { grid-template-columns: 1.5fr 1fr 1fr !important; padding: 10px 12px !important; }
+      .trow > * { font-size: 0.77rem !important; }
+
+      /* About */
+      #about { padding: 52px 16px !important; }
+      .about-img { height: 240px !important; }
+      #about-grid { gap: 32px !important; }
+
+      /* Sustainability */
+      .sustainability-section { padding: 52px 16px !important; background-attachment: scroll !important; }
+      .sustainability-section h2 { font-size: clamp(1.6rem, 6vw, 2.4rem) !important; }
+      .sustain-stat-cell { padding: 28px 16px !important; }
+      .sustain-stat-num { font-size: 2rem !important; }
+      .sustain-eco-box { padding: 24px 20px !important; }
+
+      /* Contact */
+      #contact { padding: 52px 16px !important; }
+      #contact-grid { gap: 32px !important; }
+
+      /* FAQ */
+      #faq { padding: 52px 16px !important; }
+      .faq-q { padding: 16px 16px !important; }
+      .faq-a { padding: 0 16px 16px !important; }
+
+      /* Footer */
+      footer { padding: 40px 16px 24px !important; }
+      .footer-inner { gap: 24px !important; margin-bottom: 28px !important; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.ecopal-bg.com/#org",
+        "name": "EcoPal",
+        "alternateName": "ECOPAL - Eco Pallets",
+        "url": "https://www.ecopal-bg.com",
+        "description": "Производител на иновативни еко палети от слънчогледова люспа в България",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Суворово",
+          "addressRegion": "Варна",
+          "addressCountry": "BG"
+        },
+        "areaServed": ["BG","EU"],
+        "email": "g.berbenkov@agros.net"
+      },
+      {
+        "@type": "Product",
+        "name": "EcoPal Палет 1200×800 mm",
+        "description": "Еко палет от слънчогледова люспа, EUR стандарт. Тегло 15кг, статично натоварване 5000кг.",
+        "brand": {"@type": "Brand", "name": "EcoPal"},
+        "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "BGN"}
+      },
+      {
+        "@type": "Product",
+        "name": "EcoPal Палет 1200×1000 mm",
+        "description": "Еко палет от слънчогледова люспа, индустриален размер. Тегло 15кг, статично натоварване 5000кг.",
+        "brand": {"@type": "Brand", "name": "EcoPal"},
+        "offers": {"@type": "Offer", "availability": "https://schema.org/InStock", "priceCurrency": "BGN"}
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav id="navbar">
+  <div class="nav-inner" style="max-width:1152px;margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;justify-content:space-between;">
+
+    <!-- Logo -->
+    <a href="#" style="display:flex;align-items:center;gap:10px;text-decoration:none;" aria-label="EcoPal — начало">
+      <img src="images/ECOPAL-LOGO.png" alt="EcoPal Logo" style="height:56px;width:auto;display:block;">
+    </a>
+
+    <!-- Desktop links -->
+    <div class="nav-desktop" style="align-items:center;gap:28px;">
+      <a href="products.html" class="t" style="color:#1A1814;font-size:0.95rem;font-weight:600;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#C9A100'" onmouseout="this.style.color='#1A1814'" data-bg="Продукти" data-en="Products">Продукти</a>
+      <a href="advantages.html" class="t" style="color:#1A1814;font-size:0.95rem;font-weight:600;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#C9A100'" onmouseout="this.style.color='#1A1814'" data-bg="Предимства" data-en="Advantages">Предимства</a>
+      <a href="about.html" class="t" style="color:#1A1814;font-size:0.95rem;font-weight:600;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#C9A100'" onmouseout="this.style.color='#1A1814'" data-bg="За нас" data-en="About">За нас</a>
+      <a href="contact.html" class="t" style="color:#1A1814;font-size:0.95rem;font-weight:600;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#C9A100'" onmouseout="this.style.color='#1A1814'" data-bg="Контакти" data-en="Contact">Контакти</a>
+    </div>
+
+    <!-- Right -->
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div class="nav-desktop" style="align-items:center;gap:2px;padding:4px;border-radius:8px;background:#F0EDE6;border:1px solid #E0DAD0;">
+        <button class="lang-btn active" id="lbg" onclick="setLang('bg')">BG</button>
+        <button class="lang-btn" id="len" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="contact.html" class="btn-y nav-desktop-btn" style="font-size:0.85rem;padding:10px 20px;">
+        <span data-bg="Запитване" data-en="Inquiry">Запитване</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <!-- Hamburger -->
+      <button onclick="toggleMenu()" style="width:44px;height:44px;border-radius:10px;background:none;border:none;cursor:pointer;-webkit-tap-highlight-color:transparent;" class="nav-mobile" aria-label="Меню" aria-expanded="false" id="ham">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2" stroke-linecap="round">
+          <line class="ham-line ham-line-1" x1="3" y1="6" x2="21" y2="6"/>
+          <line class="ham-line ham-line-2" x1="3" y1="12" x2="21" y2="12"/>
+          <line class="ham-line ham-line-3" x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mmenu" style="border-top:1px solid #EDE9DE;background:#fff;">
+    <div style="padding:8px 20px 20px;">
+      <a href="products.html" onclick="toggleMenu()" class="mnav-link">
+        <span data-bg="Продукти" data-en="Products">Продукти</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="advantages.html" onclick="toggleMenu()" class="mnav-link">
+        <span data-bg="Предимства" data-en="Advantages">Предимства</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="about.html" onclick="toggleMenu()" class="mnav-link">
+        <span data-bg="За нас" data-en="About">За нас</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="contact.html" onclick="toggleMenu()" class="mnav-link" style="border-bottom:1px solid #F0EDE6;">
+        <span data-bg="Контакти" data-en="Contact">Контакти</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:16px;">
+        <div style="display:flex;align-items:center;gap:2px;padding:4px;border-radius:8px;background:#F0EDE6;border:1px solid #E0DAD0;flex-shrink:0;">
+          <button class="lang-btn active" id="lbgm" onclick="setLang('bg')">BG</button>
+          <button class="lang-btn" id="lenm" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="contact.html" onclick="toggleMenu()" class="btn-y" style="flex:1;justify-content:center;font-size:0.875rem;padding:11px 16px;">
+          <span data-bg="Запитване за цена" data-en="Request a Quote">Запитване за цена</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══ HERO ═══ -->
+<section id="hero" class="grain" style="position:relative;min-height:100vh;display:flex;align-items:center;padding-top:76px;overflow:hidden;background-image:url('images/landing-background.png');background-repeat:no-repeat;background-position:center center;background-size:cover;">
+  <!-- Dark overlay for text legibility -->
+  <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(10,8,4,0.72) 0%,rgba(10,8,4,0.55) 55%,rgba(10,8,4,0.25) 100%);pointer-events:none;z-index:1;"></div>
+
+  <div class="hero-content" style="max-width:1152px;margin:0 auto;padding:80px 24px;position:relative;z-index:2;width:100%;">
+
+    <!-- Left: text -->
+    <div style="max-width:520px;">
+
+      <!-- Headline -->
+      <h1 class="hero-heading rev rev-d1" style="font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;color:#FFFFFF;line-height:1.1;letter-spacing:-0.025em;margin-bottom:22px;white-space:nowrap;">
+        <span data-bg="Еко палети от" data-en="Eco Pallets from">Еко палети от</span><br>
+        <span style="color:#F5C518;" data-bg="слънчогледова люспа" data-en="Sunflower Husk">слънчогледова люспа</span>
+      </h1>
+
+      <!-- Sub -->
+      <div class="rev rev-d2" style="max-width:500px;margin-bottom:36px;">
+        <p class="hero-sub" style="color:#FFFFFF;font-size:1.35rem;line-height:1.3;font-weight:700;letter-spacing:-0.01em;margin-bottom:14px;">
+          <span data-bg="Модерно логистично решение" data-en="Modern Logistics Solution">Модерно логистично решение</span>
+        </p>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;">
+          <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.82);font-size:1rem;line-height:1.6;font-weight:300;">
+            <span style="display:inline-block;width:7px;height:7px;min-width:7px;background:#F5C518;border-radius:50%;margin-top:8px;"></span>
+            <span data-bg="Спестява място и разходи" data-en="Saves space and costs">Спестява място и разходи</span>
+          </li>
+          <li style="display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.82);font-size:1rem;line-height:1.6;font-weight:300;">
+            <span style="display:inline-block;width:7px;height:7px;min-width:7px;background:#F5C518;border-radius:50%;margin-top:8px;"></span>
+            <span data-bg="Готови за международен износ, без фитосанитарни изисквания." data-en="Ready for international export, no phytosanitary requirements.">Готови за международен износ, без фитосанитарни изисквания.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-cta-row rev rev-d2" style="display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px;">
+        <a href="products.html" class="btn-y">
+          <span data-bg="Виж продуктите" data-en="View Products">Виж продуктите</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="contact.html" class="btn-o">
+          <span data-bg="Свържи се с нас" data-en="Contact Us">Свържи се с нас</span>
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats rev rev-d3" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:380px;">
+        <div>
+          <div class="hero-stat-num display" style="font-size:1.9rem;font-weight:700;color:#FFFFFF;line-height:1;">15<span style="color:#F5C518;">kg</span></div>
+          <div style="color:rgba(255,255,255,0.85);font-size:0.78rem;margin-top:4px;" data-bg="Тегло на палета" data-en="Pallet weight">Тегло на палета</div>
+        </div>
+        <div>
+          <div class="hero-stat-num display" style="font-size:1.9rem;font-weight:700;color:#FFFFFF;line-height:1;">5000<span style="color:#F5C518;">kg</span></div>
+          <div style="color:rgba(255,255,255,0.85);font-size:0.78rem;margin-top:4px;" data-bg="Статично натоварване" data-en="Static load">Статично натоварване</div>
+        </div>
+        <div>
+          <div class="hero-stat-num display" style="font-size:1.9rem;font-weight:700;color:#FFFFFF;line-height:1;">95<span style="color:#F5C518;">%</span></div>
+          <div style="color:rgba(255,255,255,0.85);font-size:0.78rem;margin-top:4px;" data-bg="Растителна биомаса" data-en="Plant biomass">Растителна биомаса</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scroll hint -->
+  <div style="position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0.45;">
+    <div class="sdot-wrap"><div class="sdot"></div></div>
+  </div>
+</section>
+
+
+<!-- ═══ MARQUEE ═══ -->
+<div style="background:#F5C518;padding:12px 0;overflow:hidden;border-top:1px solid rgba(0,0,0,0.04);border-bottom:1px solid rgba(0,0,0,0.04);">
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-half">
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Без ISPM-15 обработка" data-en="No ISPM-15 treatment">Без ISPM-15 обработка</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Без мухъл и вредители" data-en="No mold or pests">Без мухъл и вредители</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Подходящ за хранителни продукти" data-en="Food safe">Подходящ за хранителни продукти</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="100% Биоразградим" data-en="100% Biodegradable">100% Биоразградим</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="До 60% икономия на пространство" data-en="Up to 60% space savings">До 60% икономия на пространство</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Готово за EU износ" data-en="EU export ready">Готово за EU износ</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-half">
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Без ISPM-15 обработка" data-en="No ISPM-15 treatment">Без ISPM-15 обработка</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Без мухъл и вредители" data-en="No mold or pests">Без мухъл и вредители</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Подходящ за хранителни продукти" data-en="Food safe">Подходящ за хранителни продукти</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="100% Биоразградим" data-en="100% Biodegradable">100% Биоразградим</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="До 60% икономия на пространство" data-en="Up to 60% space savings">До 60% икономия на пространство</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+      <span style="font-weight:700;font-size:0.8rem;color:#1A1814;display:flex;align-items:center;gap:7px;white-space:nowrap;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span data-bg="Готово за EU износ" data-en="EU export ready">Готово за EU износ</span></span>
+      <span style="color:rgba(26,24,20,0.3);">✦</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══ PRODUCTS ═══ -->
+<section id="products" style="padding:96px 24px;">
+  <div style="max-width:1152px;margin:0 auto;">
+
+    <div class="rev" style="text-align:center;margin-bottom:56px;">
+      <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#1A1814;letter-spacing:-0.025em;margin-bottom:14px;" data-bg="Нашите палети" data-en="Our Pallets">Нашите палети</h2>
+      <p style="color:#3D3530;font-size:1.05rem;line-height:1.7;font-weight:300;max-width:480px;margin:0 auto;" data-bg="Стандартни размери за всички логистични нужди — произведени от 95% слънчогледова биомаса." data-en="Standard sizes for all logistics needs — manufactured from 95% sunflower biomass.">Стандартни размери за всички логистични нужди — произведени от 95% слънчогледова биомаса.</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:24px;">
+
+      <!-- Card 1: 1200×800 -->
+      <div class="product-card rev rev-d1" style="display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 2px 4px rgba(26,24,20,0.04),0 12px 40px rgba(26,24,20,0.08);">
+        <!-- Image side -->
+        <div class="product-img-panel" style="background:#F7F3EC;display:flex;align-items:center;justify-content:center;padding:24px 20px;min-height:360px;">
+          <img src="images/Front-view-pallet.png" alt="EcoPal paleta 1200x800mm" style="width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 40px rgba(26,24,20,0.18)) drop-shadow(0 4px 12px rgba(26,24,20,0.1));">
+        </div>
+        <!-- Info side -->
+        <div class="product-info-panel" style="padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <span style="display:inline-block;background:#F5C518;color:#1A1814;font-size:0.65rem;font-weight:800;padding:5px 13px;border-radius:100px;letter-spacing:0.1em;margin-bottom:20px;" data-bg="EUR ПАЛЕТ" data-en="EUR PALLET">EUR ПАЛЕТ</span>
+            <h3 class="product-h3 display" style="font-size:2.4rem;font-weight:800;color:#1A1814;letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">1200 × 800 mm</h3>
+            <p style="color:#3D3530;font-size:0.9rem;line-height:1.65;margin-bottom:32px;" data-bg="Стандартен европейски размер. Идеален за хранително-вкусовата промишленост, склад и международен износ." data-en="Standard European size. Ideal for the food industry, warehousing, and international export.">Стандартен европейски размер. Идеален за хранително-вкусовата промишленост, склад и международен износ.</p>
+            <!-- Specs -->
+            <div class="product-specs" style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #EDE8DC;border-radius:14px;overflow:hidden;margin-bottom:32px;">
+              <div style="padding:14px 18px;border-right:1px solid #EDE8DC;border-bottom:1px solid #EDE8DC;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Тегло" data-en="Weight">Тегло</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;">15 kg</div>
+              </div>
+              <div style="padding:14px 18px;border-bottom:1px solid #EDE8DC;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Статично натоварване" data-en="Static load">Статично натоварване</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;">5 000 kg</div>
+              </div>
+              <div style="padding:14px 18px;border-right:1px solid #EDE8DC;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Динамично натоварване" data-en="Dynamic load">Динамично натоварване</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;">1 500 kg</div>
+              </div>
+              <div style="padding:14px 18px;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Материал" data-en="Material">Материал</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;" data-bg="Слънчоглед 95%" data-en="Sunflower 95%">Слънчоглед 95%</div>
+              </div>
+            </div>
+          </div>
+          <a href="contact.html" class="btn-y" style="align-self:flex-start;">
+            <span data-bg="Запитване за цена" data-en="Request a Quote">Запитване за цена</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: 1200×1000 -->
+      <div class="product-card rev rev-d2" style="display:grid;grid-template-columns:1fr 1fr;border-radius:20px;overflow:hidden;background:#fff;box-shadow:0 2px 4px rgba(26,24,20,0.04),0 12px 40px rgba(26,24,20,0.08);">
+        <!-- Info side (left this time for visual variety) -->
+        <div class="product-info-panel product-info-panel-r" style="padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;order:1;">
+          <div>
+            <span style="display:inline-block;background:#1A1814;color:#F5C518;font-size:0.65rem;font-weight:800;padding:5px 13px;border-radius:100px;letter-spacing:0.1em;margin-bottom:20px;" data-bg="ИНДУСТРИАЛЕН" data-en="INDUSTRIAL">ИНДУСТРИАЛЕН</span>
+            <h3 class="product-h3 display" style="font-size:2.4rem;font-weight:800;color:#1A1814;letter-spacing:-0.03em;line-height:1;margin-bottom:8px;">1200 × 1000 mm</h3>
+            <p style="color:#3D3530;font-size:0.9rem;line-height:1.65;margin-bottom:32px;" data-bg="Индустриален размер за по-тежки товари. Подходящ за производство, строителство и тежка промишленост." data-en="Industrial size for heavier loads. Suitable for manufacturing, construction, and heavy industry.">Индустриален размер за по-тежки товари. Подходящ за производство, строителство и тежка промишленост.</p>
+            <div class="product-specs" style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #EDE8DC;border-radius:14px;overflow:hidden;margin-bottom:32px;">
+              <div style="padding:14px 18px;border-right:1px solid #EDE8DC;border-bottom:1px solid #EDE8DC;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Тегло" data-en="Weight">Тегло</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;">15 kg</div>
+              </div>
+              <div style="padding:14px 18px;border-bottom:1px solid #EDE8DC;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Статично натоварване" data-en="Static load">Статично натоварване</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;">5 000 kg</div>
+              </div>
+              <div style="padding:14px 18px;border-right:1px solid #EDE8DC;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Динамично натоварване" data-en="Dynamic load">Динамично натоварване</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;">1 800 kg</div>
+              </div>
+              <div style="padding:14px 18px;">
+                <div style="color:#6B5E4E;font-size:0.7rem;letter-spacing:0.05em;text-transform:uppercase;margin-bottom:4px;" data-bg="Материал" data-en="Material">Материал</div>
+                <div style="font-weight:700;font-size:1.05rem;color:#1A1814;" data-bg="Слънчоглед 95%" data-en="Sunflower 95%">Слънчоглед 95%</div>
+              </div>
+            </div>
+          </div>
+          <a href="contact.html" class="btn-y" style="align-self:flex-start;">
+            <span data-bg="Запитване за цена" data-en="Request a Quote">Запитване за цена</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <!-- Image side -->
+        <div class="product-img-panel product-img-panel-r" style="background:#F0EDE6;display:flex;align-items:center;justify-content:center;padding:24px 20px;min-height:360px;order:2;">
+          <img src="images/Front-view-pallet.png" alt="EcoPal paleta 1200x1000mm" style="width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 16px 40px rgba(26,24,20,0.18)) drop-shadow(0 4px 12px rgba(26,24,20,0.1));">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ ADVANTAGES ═══ -->
+<section id="advantages" style="background:#F5F3EC;padding:64px 24px;position:relative;overflow:hidden;">
+  <img src="images/pallet-outline.png" aria-hidden="true" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:680px;opacity:0.09;pointer-events:none;user-select:none;">
+  <div style="max-width:1152px;margin:0 auto;position:relative;z-index:1;">
+
+    <div class="rev" style="text-align:center;margin-bottom:36px;">
+      <h2 class="display" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;color:#1A1814;letter-spacing:-0.025em;margin-bottom:10px;" data-bg="Предимствата на еко палетите" data-en="The Advantages of Eco Pallets">Предимствата на еко палетите</h2>
+      <p style="color:#3D3530;font-size:0.95rem;line-height:1.6;font-weight:300;max-width:480px;margin:0 auto;" data-bg="Нашите палети от слънчогледова люспа предлагат реални предимства пред традиционните дървени палети." data-en="Our sunflower husk pallets offer real advantages over traditional wooden pallets.">Нашите палети от слънчогледова люспа предлагат реални предимства пред традиционните дървени палети.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;">
+
+      <div class="acard rev rev-d1" style="padding:1.25rem;">
+        <div class="ibox ibox-y" style="margin-bottom:0.6rem;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 style="font-weight:600;font-size:0.95rem;color:#1A1814;margin-bottom:6px;" data-bg="Без ISPM-15 обработка" data-en="No ISPM-15 Treatment">Без ISPM-15 обработка</h3>
+        <p style="color:#3D3530;font-size:0.83rem;line-height:1.6;" data-bg="Освободени от изискванията на ISPM-15 стандарта — без топлинна обработка или фумигация за международен износ." data-en="Exempt from ISPM-15 requirements — no heat treatment or fumigation needed for international export.">Освободени от изискванията на ISPM-15 стандарта — без топлинна обработка или фумигация за международен износ.</p>
+      </div>
+
+      <div class="acard rev rev-d2" style="padding:1.25rem;">
+        <div class="ibox ibox-g" style="margin-bottom:0.6rem;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#4D7C5F" stroke-width="2" stroke-linecap="round"><path d="M12 22V12M12 12C12 7 7 3 2 3c0 5 3 9 10 9zM12 12c0-5 5-9 10-9 0 5-3 9-10 9z"/></svg></div>
+        <h3 style="font-weight:600;font-size:0.95rem;color:#1A1814;margin-bottom:6px;" data-bg="Без мухъл и вредители" data-en="No Mold or Pests">Без мухъл и вредители</h3>
+        <p style="color:#3D3530;font-size:0.83rem;line-height:1.6;" data-bg="Влагоустойчивата структура предотвратява развитието на мухъл. Не привличат насекоми и не пренасят патогени." data-en="Moisture-resistant structure prevents mold growth. Does not attract insects or harbor pathogens.">Влагоустойчивата структура предотвратява развитието на мухъл. Не привличат насекоми и не пренасят патогени.</p>
+      </div>
+
+      <div class="acard rev rev-d3" style="padding:1.25rem;">
+        <div class="ibox ibox-y" style="margin-bottom:0.6rem;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2" stroke-linecap="round"><path d="M5 9l4 4 10-10M5 20h14"/></svg></div>
+        <h3 style="font-weight:600;font-size:0.95rem;color:#1A1814;margin-bottom:6px;" data-bg="Лек — само 15 кг" data-en="Lightweight — Only 15 kg">Лек — само 15 кг</h3>
+        <p style="color:#3D3530;font-size:0.83rem;line-height:1.6;" data-bg="С тегло 15 кг спестявате значително при транспортните разходи спрямо дървените палети от 22–25 кг." data-en="At 15 kg you save significantly on transport costs compared to wooden pallets at 22–25 kg.">С тегло 15 кг спестявате значително при транспортните разходи спрямо дървените палети от 22–25 кг.</p>
+      </div>
+
+      <div class="acard rev rev-d1" style="padding:1.25rem;">
+        <div class="ibox ibox-g" style="margin-bottom:0.6rem;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#4D7C5F" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 style="font-weight:600;font-size:0.95rem;color:#1A1814;margin-bottom:6px;" data-bg="Безопасен за хранителни продукти" data-en="Food Safe">Безопасен за хранителни продукти</h3>
+        <p style="color:#3D3530;font-size:0.83rem;line-height:1.6;" data-bg="Произведен от 100% природни материали без токсични добавки. Безопасен за транспорт на хранителни стоки." data-en="Made from 100% natural materials without toxic additives. Safe for transporting food products.">Произведен от 100% природни материали без токсични добавки. Безопасен за транспорт на хранителни стоки.</p>
+      </div>
+
+      <div class="acard rev rev-d2" style="padding:1.25rem;">
+        <div class="ibox ibox-y" style="margin-bottom:0.6rem;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+        <h3 style="font-weight:600;font-size:0.95rem;color:#1A1814;margin-bottom:6px;" data-bg="До 60% икономия на пространство" data-en="Up to 60% Space Savings">До 60% икономия на пространство</h3>
+        <p style="color:#3D3530;font-size:0.83rem;line-height:1.6;" data-bg="Компактната конструкция позволява до 60% по-ефективно използване на складово и транспортно пространство." data-en="The compact design allows up to 60% more efficient use of warehouse and transport space.">Компактната конструкция позволява до 60% по-ефективно използване на складово и транспортно пространство.</p>
+      </div>
+
+      <div class="acard rev rev-d3" style="padding:1.25rem;">
+        <div class="ibox ibox-g" style="margin-bottom:0.6rem;"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#4D7C5F" stroke-width="2" stroke-linecap="round"><path d="M21 12a9 9 0 0 1-9 9m9-9a9 9 0 0 0-9-9m9 9H3m9 9a9 9 0 0 1-9-9m9 9c1.66 0 3-4.03 3-9s-1.34-9-3-9m0 18c-1.66 0-3-4.03-3-9s1.34-9 3-9"/></svg></div>
+        <h3 style="font-weight:600;font-size:0.95rem;color:#1A1814;margin-bottom:6px;" data-bg="100% Екологичен" data-en="100% Eco-Friendly">100% Екологичен</h3>
+        <p style="color:#3D3530;font-size:0.83rem;line-height:1.6;" data-bg="Произведен от земеделски отпадък — слънчогледова люспа. Напълно биоразградим с минимален въглероден отпечатък." data-en="Made from agricultural waste — sunflower husk. Fully biodegradable with a minimal carbon footprint.">Произведен от земеделски отпадък — слънчогледова люспа. Напълно биоразградим с минимален въглероден отпечатък.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ INDUSTRIES ═══ -->
+<section class="industries-section" style="background-image:url('images/truck-bg.png');background-size:cover;background-position:center;background-attachment:fixed;padding:96px 24px;position:relative;">
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.52);pointer-events:none;"></div>
+  <div style="max-width:1152px;margin:0 auto;position:relative;z-index:1;">
+
+    <div id="industries-heading" class="rev" style="text-align:center;margin-bottom:56px;">
+      <div class="badge" style="margin-bottom:14px;background:rgba(77,124,95,0.35);color:#A8D9BA;"><span data-bg="Приложение" data-en="Applications">Приложение</span></div>
+      <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#FFFFFF;letter-spacing:-0.025em;margin-bottom:14px;" data-bg="Идеален за всяка индустрия" data-en="Ideal for Any Industry">Идеален за всяка индустрия</h2>
+      <p style="color:rgba(255,255,255,0.72);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:520px;margin:0 auto;" data-bg="Нашите еко палети отговарят на строгите изисквания на различни сектори — без токсични вещества, без вредители, безопасни и надеждни." data-en="Our eco pallets meet the strict requirements of various sectors — no toxic substances, no pests, safe and reliable.">Нашите еко палети отговарят на строгите изисквания на различни сектори — без токсични вещества, без вредители, безопасни и надеждни.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;">
+
+      <!-- Food -->
+      <div class="acard rev rev-d1" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(245,197,24,0.15),rgba(245,197,24,0.04));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg>
+        </div>
+        <h3 style="font-weight:700;font-size:1.05rem;color:#1A1814;margin-bottom:10px;" data-bg="Хранителна промишленост" data-en="Food Industry">Хранителна промишленост</h3>
+        <p style="color:#3D3530;font-size:0.85rem;line-height:1.65;" data-bg="100% без токсични вещества и формалдехид. Безопасен контакт с хранителни продукти. Без мухъл и бактерии." data-en="100% free of toxic substances and formaldehyde. Safe contact with food products. No mold or bacteria.">100% без токсични вещества и формалдехид. Безопасен контакт с хранителни продукти. Без мухъл и бактерии.</p>
+      </div>
+
+      <!-- Pharma -->
+      <div class="acard rev rev-d2" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(77,124,95,0.15),rgba(77,124,95,0.04));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4D7C5F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12h6M12 9v6"/></svg>
+        </div>
+        <h3 style="font-weight:700;font-size:1.05rem;color:#1A1814;margin-bottom:10px;" data-bg="Фармацевтика" data-en="Pharmaceuticals">Фармацевтика</h3>
+        <p style="color:#3D3530;font-size:0.85rem;line-height:1.65;" data-bg="Нулев риск от кръстосано замърсяване. Чисти и хигиенични повърхности. Съответствие с изискванията за чисти помещения." data-en="Zero cross-contamination risk. Clean and hygienic surfaces. Compliant with cleanroom requirements.">Нулев риск от кръстосано замърсяване. Чисти и хигиенични повърхности. Съответствие с изискванията за чисти помещения.</p>
+      </div>
+
+      <!-- Electronics -->
+      <div class="acard rev rev-d3" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(245,197,24,0.15),rgba(245,197,24,0.04));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M15 2v2M9 2v2M2 9h2M2 15h2M22 9h-2M22 15h-2M15 22v-2M9 22v-2"/></svg>
+        </div>
+        <h3 style="font-weight:700;font-size:1.05rem;color:#1A1814;margin-bottom:10px;" data-bg="Електроника" data-en="Electronics">Електроника</h3>
+        <p style="color:#3D3530;font-size:0.85rem;line-height:1.65;" data-bg="Гладки повърхности без стърготини. Еднакви размери и тегло. Безопасен за чувствителни компоненти и оборудване." data-en="Smooth surfaces without splinters. Consistent dimensions and weight. Safe for sensitive components and equipment.">Гладки повърхности без стърготини. Еднакви размери и тегло. Безопасен за чувствителни компоненти и оборудване.</p>
+      </div>
+
+      <!-- Logistics -->
+      <div class="acard rev rev-d1" style="text-align:center;padding:2rem 1.5rem;">
+        <div style="width:64px;height:64px;border-radius:16px;background:linear-gradient(135deg,rgba(77,124,95,0.15),rgba(77,124,95,0.04));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4D7C5F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 style="font-weight:700;font-size:1.05rem;color:#1A1814;margin-bottom:10px;" data-bg="Логистика и складиране" data-en="Logistics & Warehousing">Логистика и складиране</h3>
+        <p style="color:#3D3530;font-size:0.85rem;line-height:1.65;" data-bg="До 60% по-ефективно използване на пространство. Без ISPM-15 за бърз международен транзит. По-малко камиони, по-ниски разходи." data-en="Up to 60% more efficient space use. No ISPM-15 for fast international transit. Fewer trucks, lower costs.">До 60% по-ефективно използване на пространство. Без ISPM-15 за бърз международен транзит. По-малко камиони, по-ниски разходи.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ COMPARISON ═══ -->
+<section id="comparison" style="padding:96px 24px;">
+  <div style="max-width:860px;margin:0 auto;">
+
+    <div class="rev" style="text-align:center;margin-bottom:52px;">
+      <div class="badge" style="margin-bottom:14px;"><span data-bg="Сравнение" data-en="Comparison">Сравнение</span></div>
+      <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#1A1814;letter-spacing:-0.025em;" data-bg="EcoPal срещу дървен палет" data-en="EcoPal vs. Wooden Pallet">EcoPal срещу дървен палет</h2>
+    </div>
+
+    <div class="rev" style="background:#fff;border-radius:18px;border:1px solid #EDE9DE;overflow:hidden;box-shadow:0 2px 6px rgba(26,24,20,0.05),0 8px 24px rgba(26,24,20,0.04);">
+      <!-- Header -->
+      <div class="trow" style="background:linear-gradient(to right,#FDFCF5,#FEF9E0,#FDFCF5);border-bottom:1.5px solid #EDE9DE;font-weight:600;">
+        <div style="font-size:0.8rem;color:#3D3530;text-transform:uppercase;letter-spacing:0.06em;" data-bg="Характеристика" data-en="Feature">Характеристика</div>
+        <div style="text-align:center;display:flex;align-items:center;justify-content:center;gap:6px;">
+          <div style="width:8px;height:8px;background:#F5C518;border-radius:50%;"></div>
+          EcoPal
+        </div>
+        <div style="text-align:center;color:#3D3530;" data-bg="Дървен палет" data-en="Wooden Pallet">Дървен палет</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="Тегло" data-en="Weight">Тегло</div>
+        <div style="text-align:center;" class="yes">15 kg ✓</div>
+        <div style="text-align:center;color:#3D3530;">22–25 kg</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="Статично натоварване" data-en="Static load capacity">Статично натоварване</div>
+        <div style="text-align:center;" class="yes">5 000 kg ✓</div>
+        <div style="text-align:center;color:#3D3530;">3 000–4 000 kg</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="Динамично натоварване" data-en="Dynamic load capacity">Динамично натоварване</div>
+        <div style="text-align:center;" class="yes">1 500–1 800 kg ✓</div>
+        <div style="text-align:center;color:#3D3530;">1 000–1 500 kg</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="ISPM-15 обработка" data-en="ISPM-15 treatment">ISPM-15 обработка</div>
+        <div style="text-align:center;" class="yes" data-bg="Не се изисква ✓" data-en="Not required ✓">Не се изисква ✓</div>
+        <div style="text-align:center;" class="no" data-bg="Задължителна ✗" data-en="Required ✗">Задължителна ✗</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="Мухъл и гъбички" data-en="Mold and fungi">Мухъл и гъбички</div>
+        <div style="text-align:center;" class="yes" data-bg="Без риск ✓" data-en="No risk ✓">Без риск ✓</div>
+        <div style="text-align:center;" class="no" data-bg="Риск ✗" data-en="Risk ✗">Риск ✗</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="Подходящ за храни" data-en="Food safe">Подходящ за храни</div>
+        <div style="text-align:center;" class="yes" data-bg="Да ✓" data-en="Yes ✓">Да ✓</div>
+        <div style="text-align:center;" class="no" data-bg="Условно ✗" data-en="Conditional ✗">Условно ✗</div>
+      </div>
+      <div class="trow">
+        <div style="font-size:0.875rem;color:#3D3530;" data-bg="Въглероден отпечатък" data-en="Carbon footprint">Въглероден отпечатък</div>
+        <div style="text-align:center;" class="yes" data-bg="Нисък ✓" data-en="Low ✓">Нисък ✓</div>
+        <div style="text-align:center;" class="no" data-bg="Висок ✗" data-en="High ✗">Висок ✗</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about" style="background:#F5F3EC;padding:96px 24px;">
+
+  <div id="about-grid" style="max-width:1152px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center;">
+
+    <!-- Image -->
+    <div class="about-img rev" style="position:relative;border-radius:18px;overflow:hidden;height:400px;">
+      <img src="images/Ecopal-production.jpg" alt="EcoPal производство" style="width:100%;height:100%;object-fit:cover;">
+      <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(26,24,20,0.55) 0%,transparent 55%);"></div>
+      <!-- Location card -->
+      <div style="position:absolute;bottom:18px;left:18px;right:18px;background:rgba(245,197,24,0.95);border-radius:11px;padding:14px 16px;display:flex;align-items:center;gap:12px;">
+        <div style="width:36px;height:36px;background:rgba(26,24,20,0.1);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A1814" stroke-width="2.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+        </div>
+        <div>
+          <div style="font-weight:700;font-size:0.875rem;color:#1A1814;" data-bg="Суворово, България" data-en="Suvorovo, Bulgaria">Суворово, България</div>
+          <div style="font-size:0.75rem;color:rgba(26,24,20,0.82);" data-bg="Нашето производство" data-en="Our production facility">Нашето производство</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Text -->
+    <div class="rev rev-d1">
+      <div class="badge" style="margin-bottom:18px;"><span data-bg="За нас" data-en="About Us">За нас</span></div>
+      <h2 class="display" style="font-size:clamp(1.9rem,4vw,3rem);font-weight:800;color:#1A1814;letter-spacing:-0.025em;line-height:1.12;margin-bottom:20px;" data-bg="Иновации от природата" data-en="Innovation from Nature">Иновации от природата</h2>
+      <p style="color:#3D3530;line-height:1.8;font-weight:300;margin-bottom:16px;" data-bg="EcoPal е български производител на иновативни палети от слънчогледова люспа — земеделски отпадък, превърнат в устойчив логистичен продукт с висока добавена стойност." data-en="EcoPal is a Bulgarian manufacturer of innovative pallets from sunflower husk — agricultural waste transformed into a sustainable logistics product with high added value.">EcoPal е български производител на иновативни палети от слънчогледова люспа — земеделски отпадък, превърнат в устойчив логистичен продукт с висока добавена стойност.</p>
+      <p style="color:#3D3530;line-height:1.8;font-weight:300;margin-bottom:32px;" data-bg="Нашите палети съдържат 95% слънчогледова биомаса и 5% органичен свързващ агент. Резултатът е по-лек и по-издръжлив продукт от дървото, с по-добри екологични показатели и без нуждата от скъпа фитосанитарна обработка при износ." data-en="Our pallets contain 95% sunflower biomass and 5% organic binder. The result is a product lighter and stronger than wood, with better environmental credentials and no need for costly phytosanitary treatment when exporting.">Нашите палети съдържат 95% слънчогледова биомаса и 5% органичен свързващ агент. Резултатът е по-лек и по-издръжлив продукт от дървото, с по-добри екологични показатели и без нуждата от скъпа фитосанитарна обработка при износ.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div style="background:#fff;border-radius:11px;padding:14px 16px;border:1px solid #EDE9DE;">
+          <div class="display" style="font-size:1.6rem;font-weight:800;color:#C9A100;line-height:1;">95%</div>
+          <div style="color:#3D3530;font-size:0.8rem;margin-top:4px;" data-bg="Растителна биомаса" data-en="Plant biomass">Растителна биомаса</div>
+        </div>
+        <div style="background:#fff;border-radius:11px;padding:14px 16px;border:1px solid #EDE9DE;">
+          <div class="display" style="font-size:1.6rem;font-weight:800;color:#C9A100;line-height:1;">100%</div>
+          <div style="color:#3D3530;font-size:0.8rem;margin-top:4px;" data-bg="Биоразградим" data-en="Biodegradable">Биоразградим</div>
+        </div>
+        <div style="background:#fff;border-radius:11px;padding:14px 16px;border:1px solid #EDE9DE;">
+          <div class="display" style="font-size:1.6rem;font-weight:800;color:#C9A100;line-height:1;">2</div>
+          <div style="color:#3D3530;font-size:0.8rem;margin-top:4px;" data-bg="Стандартни размера" data-en="Standard sizes">Стандартни размера</div>
+        </div>
+        <div style="background:#fff;border-radius:11px;padding:14px 16px;border:1px solid #EDE9DE;">
+          <div class="display" style="font-size:1.6rem;font-weight:800;color:#C9A100;line-height:1;">EU</div>
+          <div style="color:#3D3530;font-size:0.8rem;margin-top:4px;" data-bg="Готово за износ" data-en="Export ready">Готово за износ</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ SUSTAINABILITY ═══ -->
+<section class="sustainability-section" style="background-image:url('images/sunflower-field.png');background-size:cover;background-position:center;background-attachment:fixed;padding:96px 24px;position:relative;overflow:hidden;">
+  <!-- Dark overlay -->
+  <div style="position:absolute;inset:0;background:rgba(0,0,0,0.58);pointer-events:none;z-index:0;"></div>
+
+  <div style="max-width:1152px;margin:0 auto;position:relative;z-index:1;">
+
+    <div class="rev" style="text-align:center;margin-bottom:64px;">
+      <div class="badge" style="background:rgba(77,124,95,0.2);color:#7BC49A;margin-bottom:14px;"><span data-bg="Устойчивост" data-en="Sustainability">Устойчивост</span></div>
+      <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#FFFFFF;letter-spacing:-0.025em;margin-bottom:14px;" data-bg="Защо има значение" data-en="Why It Matters">Защо има значение</h2>
+      <p style="color:rgba(255,255,255,0.80);font-size:1.05rem;line-height:1.7;font-weight:300;max-width:520px;margin:0 auto;" data-bg="Световното производство на дървени палети оставя огромен екологичен отпечатък. EcoPal предлага отговор на тази криза." data-en="Global wooden pallet production leaves a massive environmental footprint. EcoPal offers an answer to this crisis.">Световното производство на дървени палети оставя огромен екологичен отпечатък. EcoPal предлага отговор на тази криза.</p>
+    </div>
+
+    <!-- Big stats grid -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:rgba(255,255,255,0.07);border-radius:20px;overflow:hidden;margin-bottom:48px;">
+
+      <div class="sustain-stat-cell rev" style="background:#1A1814;padding:40px 28px;text-align:center;">
+        <div class="sustain-stat-num display" style="font-size:2.8rem;font-weight:800;color:#F5C518;line-height:1;margin-bottom:10px;">1.7<span style="font-size:1.4rem;font-weight:700;"> млрд.</span></div>
+        <div style="color:rgba(255,255,255,0.78);font-size:0.83rem;line-height:1.55;" data-bg="дървени палети се произвеждат по света всяка година" data-en="wooden pallets produced globally every year">дървени палети се произвеждат по света всяка година</div>
+      </div>
+
+      <div class="sustain-stat-cell rev rev-d1" style="background:#1A1814;padding:40px 28px;text-align:center;">
+        <div class="sustain-stat-num display" style="font-size:2.8rem;font-weight:800;color:#7BC49A;line-height:1;margin-bottom:10px;">170<span style="font-size:1.4rem;font-weight:700;"> млн.</span></div>
+        <div style="color:rgba(255,255,255,0.78);font-size:0.83rem;line-height:1.55;" data-bg="дървета се изсичат ежегодно само за производство на палети" data-en="trees cut down annually just for pallet production">дървета се изсичат ежегодно само за производство на палети</div>
+      </div>
+
+      <div class="sustain-stat-cell rev rev-d2" style="background:#1A1814;padding:40px 28px;text-align:center;">
+        <div class="sustain-stat-num display" style="font-size:2.8rem;font-weight:800;color:#F5C518;line-height:1;margin-bottom:10px;">-80<span style="font-size:2rem;font-weight:700;">%</span></div>
+        <div style="color:rgba(255,255,255,0.78);font-size:0.83rem;line-height:1.55;" data-bg="по-малко CO₂ при производство срещу дървен палет" data-en="less CO₂ in production vs. a wooden pallet">по-малко CO₂ при производство срещу дървен палет</div>
+      </div>
+
+      <div class="sustain-stat-cell rev rev-d3" style="background:#1A1814;padding:40px 28px;text-align:center;">
+        <div class="display" style="font-size:2.8rem;font-weight:800;color:#7BC49A;line-height:1;margin-bottom:10px;">100<span style="font-size:2rem;font-weight:700;">%</span></div>
+        <div style="color:rgba(255,255,255,0.78);font-size:0.83rem;line-height:1.55;" data-bg="от суровините — местни земеделски отпадъци" data-en="of raw materials from local agricultural waste">от суровините — местни земеделски отпадъци</div>
+      </div>
+
+    </div>
+
+    <!-- Circular economy -->
+    <div class="sustain-eco-box rev" style="background:rgba(0,0,0,0.55);border:1px solid rgba(255,255,255,0.18);border-radius:18px;padding:36px 32px;backdrop-filter:blur(8px);">
+      <div style="text-align:center;margin-bottom:32px;">
+        <h3 class="display" style="font-size:1.3rem;font-weight:700;color:#FFFFFF;" data-bg="Кръгова икономика — край на живота на палета" data-en="Circular Economy — End of Life">Кръгова икономика — край на живота на палета</h3>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px;">
+
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:38px;height:38px;border-radius:10px;background:rgba(245,197,24,0.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2.2"><path d="M12 22V12M12 12C12 7 7 3 2 3c0 5 3 9 10 9zM12 12c0-5 5-9 10-9 0 5-3 9-10 9z"/></svg>
+          </div>
+          <div>
+            <div style="color:#FFFFFF;font-weight:600;font-size:0.9rem;margin-bottom:5px;" data-bg="Компостиране" data-en="Composting">Компостиране</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:0.82rem;line-height:1.6;" data-bg="Слънчогледовата люспа е богата на калий и се разгражда естествено в почвата като ценен тор." data-en="Sunflower husk is rich in potassium and decomposes naturally into the soil as valuable fertilizer.">Слънчогледовата люспа е богата на калий и се разгражда естествено в почвата като ценен тор.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:38px;height:38px;border-radius:10px;background:rgba(77,124,95,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#7BC49A" stroke-width="2.2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+          </div>
+          <div>
+            <div style="color:#FFFFFF;font-weight:600;font-size:0.9rem;margin-bottom:5px;" data-bg="Рециклиране" data-en="Recycling">Рециклиране</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:0.82rem;line-height:1.6;" data-bg="Механично раздробяване и повторна употреба като суровина за нови палети, плоскости или композитни материали." data-en="Mechanically shredded and reused as raw material for new pallets, boards, or composite materials.">Механично раздробяване и повторна употреба като суровина за нови палети, плоскости или композитни материали.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;align-items:flex-start;gap:14px;">
+          <div style="width:38px;height:38px;border-radius:10px;background:rgba(245,197,24,0.14);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#F5C518" stroke-width="2.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <div style="color:#FFFFFF;font-weight:600;font-size:0.9rem;margin-bottom:5px;" data-bg="Оползотворяване на енергия" data-en="Energy Recovery">Оползотворяване на енергия</div>
+            <div style="color:rgba(255,255,255,0.75);font-size:0.82rem;line-height:1.6;" data-bg="Безопасно изгаряне с оползотворяване на топлинна енергия. Без токсични емисии или вредни отпадъци." data-en="Safe combustion for heat energy recovery. No toxic emissions or harmful waste.">Безопасно изгаряне с оползотворяване на топлинна енергия. Без токсични емисии или вредни отпадъци.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact" style="padding:96px 24px;">
+  <div id="contact-grid" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:56px;align-items:start;">
+
+    <!-- Info -->
+    <div class="rev">
+      <h2 class="display" style="font-size:clamp(1.9rem,4vw,3rem);font-weight:800;color:#1A1814;letter-spacing:-0.025em;line-height:1.12;margin-bottom:18px;" data-bg="Изпратете запитване" data-en="Send an Inquiry">Изпратете запитване</h2>
+      <p style="color:#3D3530;line-height:1.8;font-weight:300;margin-bottom:36px;" data-bg="Свържете се с нас за запитване, ценова оферта или повече информация за нашите еко палети от слънчогледова люспа." data-en="Contact us for an inquiry, price quote, or more information about our eco pallets from sunflower husk.">Свържете се с нас за запитване, ценова оферта или повече информация за нашите еко палети от слънчогледова люспа.</p>
+
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div class="ibox ibox-y" style="flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2" stroke-linecap="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+          <div>
+            <div style="color:#3D3530;font-size:0.72rem;margin-bottom:2px;" data-bg="Адрес" data-en="Address">Адрес</div>
+            <div style="font-weight:500;" data-bg="ул. Бузлуджа 1Б, Суворово, България" data-en="1B Buzludzha St, Suvorovo, Bulgaria">ул. Бузлуджа 1Б, Суворово, България</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div class="ibox ibox-y" style="flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div>
+            <div style="color:#3D3530;font-size:0.72rem;margin-bottom:2px;">Email</div>
+            <div style="font-weight:500;">g.berbenkov@agros.net</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div class="ibox ibox-y" style="flex-shrink:0;"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div>
+            <div style="color:#3D3530;font-size:0.72rem;margin-bottom:2px;" data-bg="Телефон" data-en="Phone">Телефон</div>
+            <div style="font-weight:500;">+359 879 127 112</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="rev rev-d1" style="background:#fff;border-radius:18px;padding:28px;border:1px solid #EDE9DE;box-shadow:0 2px 6px rgba(26,24,20,0.05);">
+      <form id="cform" onsubmit="handleForm(event)">
+        <div style="display:flex;flex-direction:column;gap:14px;">
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:500;color:#1A1814;margin-bottom:6px;" data-bg="Вашето име" data-en="Your Name">Вашето име</label>
+            <input type="text" class="finput" id="f-name" required data-bg-ph="Иван Иванов" data-en-ph="John Smith">
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:500;color:#1A1814;margin-bottom:6px;">Email</label>
+            <input type="email" class="finput" placeholder="email@company.com" required>
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:500;color:#1A1814;margin-bottom:6px;" data-bg="Компания" data-en="Company">Компания</label>
+            <input type="text" class="finput" id="f-company" data-bg-ph="Вашата компания" data-en-ph="Your company">
+          </div>
+          <div>
+            <label style="display:block;font-size:0.85rem;font-weight:500;color:#1A1814;margin-bottom:6px;" data-bg="Съобщение" data-en="Message">Съобщение</label>
+            <textarea class="finput" rows="4" id="f-msg" style="resize:vertical;" data-bg-ph="Вашето запитване..." data-en-ph="Your inquiry..."></textarea>
+          </div>
+          <button type="submit" class="btn-y" id="submit-btn" style="width:100%;justify-content:center;">
+            <span data-bg="Изпрати запитване" data-en="Send Inquiry">Изпрати запитване</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ FAQ ═══ -->
+<section id="faq" style="padding:96px 24px;background:#F5F3EC;">
+  <div style="max-width:780px;margin:0 auto;">
+
+    <div class="rev" style="text-align:center;margin-bottom:52px;">
+      <div class="badge" style="margin-bottom:14px;"><span data-bg="Въпроси и отговори" data-en="FAQ">Въпроси и отговори</span></div>
+      <h2 class="display" style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:800;color:#1A1814;letter-spacing:-0.025em;margin-bottom:14px;" data-bg="Имате въпроси?" data-en="Have Questions?">Имате въпроси?</h2>
+      <p style="color:#3D3530;font-size:1.05rem;line-height:1.7;font-weight:300;" data-bg="Отговори на най-честите въпроси за нашите еко палети." data-en="Answers to the most common questions about our eco pallets.">Отговори на най-честите въпроси за нашите еко палети.</p>
+    </div>
+
+    <div class="rev" style="display:flex;flex-direction:column;gap:10px;">
+
+      <div class="faq-item" style="background:#fff;border-radius:14px;border:1px solid #EDE9DE;overflow:hidden;">
+        <button class="faq-q" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;gap:16px;">
+          <span style="font-weight:600;font-size:0.95rem;color:#1A1814;" data-bg="Освободени ли са палетите EcoPal от ISPM-15 изискванията?" data-en="Are EcoPal pallets exempt from ISPM-15 requirements?">Освободени ли са палетите EcoPal от ISPM-15 изискванията?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2.5" style="flex-shrink:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" style="display:none;padding:0 22px 20px;">
+          <p style="color:#3D3530;font-size:0.9rem;line-height:1.7;" data-bg="Да. Тъй като нашите палети са изработени от земеделска биомаса, а не от дърво, те са напълно освободени от ISPM-15. Не е необходима топлинна обработка, фумигация или фитосанитарни сертификати за международен износ — спестявате време и разходи." data-en="Yes. Since our pallets are made from agricultural biomass, not wood, they are fully exempt from ISPM-15. No heat treatment, fumigation, or phytosanitary certificates are required for international export — saving time and costs.">Да. Тъй като нашите палети са изработени от земеделска биомаса, а не от дърво, те са напълно освободени от ISPM-15. Не е необходима топлинна обработка, фумигация или фитосанитарни сертификати за международен износ — спестявате време и разходи.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:#fff;border-radius:14px;border:1px solid #EDE9DE;overflow:hidden;">
+        <button class="faq-q" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;gap:16px;">
+          <span style="font-weight:600;font-size:0.95rem;color:#1A1814;" data-bg="Сравними ли са по здравина с традиционните дървени палети?" data-en="Are they comparable in strength to traditional wooden pallets?">Сравними ли са по здравина с традиционните дървени палети?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2.5" style="flex-shrink:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" style="display:none;padding:0 22px 20px;">
+          <p style="color:#3D3530;font-size:0.9rem;line-height:1.7;" data-bg="Да, и в много отношения ги превъзхождат. EcoPal издържа статично натоварване до 5000 кг и динамично до 1500–1800 кг — по-добре от стандартните дървени палети. Теглото им е само 15 кг срещу 22–25 кг при дървените, което значително снижава транспортните разходи." data-en="Yes, and in many ways they exceed them. EcoPal withstands static loading up to 5000 kg and dynamic up to 1500–1800 kg — better than standard wooden pallets. Their weight is only 15 kg vs. 22–25 kg for wooden ones, significantly reducing transport costs.">Да, и в много отношения ги превъзхождат. EcoPal издържа статично натоварване до 5000 кг и динамично до 1500–1800 кг — по-добре от стандартните дървени палети. Теглото им е само 15 кг срещу 22–25 кг при дървените, което значително снижава транспортните разходи.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:#fff;border-radius:14px;border:1px solid #EDE9DE;overflow:hidden;">
+        <button class="faq-q" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;gap:16px;">
+          <span style="font-weight:600;font-size:0.95rem;color:#1A1814;" data-bg="Подходящи ли са за транспорт на хранителни продукти?" data-en="Are they suitable for transporting food products?">Подходящи ли са за транспорт на хранителни продукти?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2.5" style="flex-shrink:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" style="display:none;padding:0 22px 20px;">
+          <p style="color:#3D3530;font-size:0.9rem;line-height:1.7;" data-bg="Абсолютно. EcoPal не съдържа токсични вещества, формалдехид или химически добавки. Произведен е изцяло от натурална слънчогледова биомаса с органичен свързващ агент. Поради това е идеален за хранително-вкусовата промишленост и фармацевтичния сектор." data-en="Absolutely. EcoPal contains no toxic substances, formaldehyde, or chemical additives. It is made entirely from natural sunflower biomass with an organic binder. It is therefore ideal for the food industry and pharmaceutical sector.">Абсолютно. EcoPal не съдържа токсични вещества, формалдехид или химически добавки. Произведен е изцяло от натурална слънчогледова биомаса с органичен свързващ агент. Поради това е идеален за хранително-вкусовата промишленост и фармацевтичния сектор.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:#fff;border-radius:14px;border:1px solid #EDE9DE;overflow:hidden;">
+        <button class="faq-q" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;gap:16px;">
+          <span style="font-weight:600;font-size:0.95rem;color:#1A1814;" data-bg="Колко палета EcoPal се поберат в контейнер?" data-en="How many EcoPal pallets fit in a container?">Колко палета EcoPal се поберат в контейнер?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2.5" style="flex-shrink:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" style="display:none;padding:0 22px 20px;">
+          <p style="color:#3D3530;font-size:0.9rem;line-height:1.7;" data-bg="Благодарение на компактния дизайн, в 40-футов HC контейнер се побират около 1700 палета EcoPal, а в стандартен камион — около 1850. Това намалява броя на необходимите превозни средства с около 50% и значително снижава транспортните разходи." data-en="Thanks to their compact design, approximately 1700 EcoPal pallets fit in a 40-foot HC container, and approximately 1850 in a standard truck. This reduces the number of vehicles needed by about 50% and significantly lowers transport costs.">Благодарение на компактния дизайн, в 40-футов HC контейнер се побират около 1700 палета EcoPal, а в стандартен камион — около 1850. Това намалява броя на необходимите превозни средства с около 50% и значително снижава транспортните разходи.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:#fff;border-radius:14px;border:1px solid #EDE9DE;overflow:hidden;">
+        <button class="faq-q" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;gap:16px;">
+          <span style="font-weight:600;font-size:0.95rem;color:#1A1814;" data-bg="Влагоустойчиви ли са и могат ли да се използват на открито?" data-en="Are they moisture-resistant and suitable for outdoor use?">Влагоустойчиви ли са и могат ли да се използват на открито?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2.5" style="flex-shrink:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" style="display:none;padding:0 22px 20px;">
+          <p style="color:#3D3530;font-size:0.9rem;line-height:1.7;" data-bg="Да. Структурата на EcoPal е влагоустойчива и устойчива на промени в температурата и влажността. Подходящи са за употреба на открито, в различни климатични условия. Не набъбват при намокряне и не се деформират — за разлика от дървените палети." data-en="Yes. The EcoPal structure is moisture-resistant and resistant to temperature and humidity changes. Suitable for outdoor use in various climatic conditions. They do not swell when wet and do not deform — unlike wooden pallets.">Да. Структурата на EcoPal е влагоустойчива и устойчива на промени в температурата и влажността. Подходящи са за употреба на открито, в различни климатични условия. Не набъбват при намокряне и не се деформират — за разлика от дървените палети.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" style="background:#fff;border-radius:14px;border:1px solid #EDE9DE;overflow:hidden;">
+        <button class="faq-q" onclick="toggleFaq(this)" style="width:100%;display:flex;align-items:center;justify-content:space-between;padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;gap:16px;">
+          <span style="font-weight:600;font-size:0.95rem;color:#1A1814;" data-bg="Какво се случва с повредените или изхабените палети?" data-en="What happens to damaged or worn-out pallets?">Какво се случва с повредените или изхабените палети?</span>
+          <svg class="faq-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A100" stroke-width="2.5" style="flex-shrink:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1);"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a" style="display:none;padding:0 22px 20px;">
+          <p style="color:#3D3530;font-size:0.9rem;line-height:1.7;" data-bg="Изхабените палети EcoPal могат да бъдат компостирани, механично раздробени за повторна употреба или изгорени за оползотворяване на енергия — без токсични отпадъци. Не се генерират вредни вещества при нито един от тези процеси." data-en="Worn-out EcoPal pallets can be composted, mechanically shredded for reuse, or incinerated for energy recovery — without toxic waste. No harmful substances are generated in any of these processes.">Изхабените палети EcoPal могат да бъдат компостирани, механично раздробени за повторна употреба или изгорени за оползотворяване на енергия — без токсични отпадъци. Не се генерират вредни вещества при нито един от тези процеси.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="rev" style="text-align:center;margin-top:40px;">
+      <p style="color:#3D3530;font-size:0.9rem;margin-bottom:16px;" data-bg="Имате допълнителни въпроси?" data-en="Have more questions?">Имате допълнителни въпроси?</p>
+      <a href="contact.html" class="btn-y">
+        <span data-bg="Свържете се с нас" data-en="Contact Us">Свържете се с нас</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:#1A1814;color:#FDFCF5;padding:56px 24px 32px;">
+  <div style="max-width:1152px;margin:0 auto;">
+    <div class="footer-inner" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:40px;margin-bottom:48px;">
+
+      <div style="grid-column:span 1;">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;"><img src="images/ECOPAL-LOGO.png" alt="EcoPal" style="height:38px;width:auto;display:block;filter:brightness(0) invert(1);"></div>
+        <p style="color:#A09488;font-size:0.83rem;line-height:1.7;" data-bg="Еко палети от слънчогледова люспа. Суворово, България." data-en="Eco pallets from sunflower husk. Suvorovo, Bulgaria.">Еко палети от слънчогледова люспа. Суворово, България.</p>
+      </div>
+
+      <div>
+        <h4 style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7A7268;margin-bottom:14px;" data-bg="Навигация" data-en="Navigation">Навигация</h4>
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <a href="products.html" style="color:#A09488;font-size:0.86rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#F5C518'" onmouseout="this.style.color='#A09488'" data-bg="Продукти" data-en="Products">Продукти</a>
+          <a href="advantages.html" style="color:#A09488;font-size:0.86rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#F5C518'" onmouseout="this.style.color='#A09488'" data-bg="Предимства" data-en="Advantages">Предимства</a>
+          <a href="about.html" style="color:#A09488;font-size:0.86rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#F5C518'" onmouseout="this.style.color='#A09488'" data-bg="За нас" data-en="About">За нас</a>
+          <a href="contact.html" style="color:#A09488;font-size:0.86rem;text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='#F5C518'" onmouseout="this.style.color='#A09488'" data-bg="Контакти" data-en="Contact">Контакти</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 style="font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#7A7268;margin-bottom:14px;" data-bg="Контакти" data-en="Contact">Контакти</h4>
+        <div style="display:flex;flex-direction:column;gap:6px;color:#A09488;font-size:0.86rem;">
+          <span>g.berbenkov@agros.net</span>
+          <span>+359 879 127 112</span>
+          <span data-bg="Суворово, Варненска обл." data-en="Suvorovo, Varna Region">Суворово, Варненска обл.</span>
+          <span data-bg="България" data-en="Bulgaria">България</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="border-top:1px solid rgba(253,252,245,0.07);padding-top:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;">
+      <p style="color:#7A7268;font-size:0.78rem;" data-bg="© 2025 EcoPal. Всички права запазени." data-en="© 2025 EcoPal. All rights reserved.">© 2025 EcoPal. Всички права запазени.</p>
+      <p style="color:#7A7268;font-size:0.78rem;">ecopal-bg.com</p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  // ── Language ──────────────────────────────────────────────
+  let lang = 'bg';
+
+  function setLang(l) {
+    lang = l;
+    // Translate text nodes
+    document.querySelectorAll('[data-bg]').forEach(el => {
+      const t = l === 'bg' ? el.dataset.bg : el.dataset.en;
+      if (t) el.textContent = t;
+    });
+    // Translate placeholders
+    document.querySelectorAll('[data-bg-ph]').forEach(el => {
+      el.placeholder = l === 'bg' ? el.dataset.bgPh : el.dataset.enPh;
+    });
+    // html lang attr
+    document.documentElement.lang = l;
+    // title + description
+    if (l === 'en') {
+      document.title = 'EcoPal — Eco Pallets from Sunflower Husk | Bulgaria';
+      document.querySelector('meta[name="description"]').content =
+        'EcoPal manufactures innovative eco pallets from sunflower husk. 15 kg, 5000 kg static load, ISPM-15 exempt. Ready for international export from Bulgaria.';
+    } else {
+      document.title = 'EcoPal — Еко Палети от Слънчогледова Люспа | Суворово, България';
+      document.querySelector('meta[name="description"]').content =
+        'EcoPal произвежда иновативни еко палети от слънчогледова люспа. 15 кг, товарност 5000 кг, без ISPM-15 обработка. Идеални за международен износ от България.';
+    }
+    // Active states
+    ['lbg','len','lbgm','lenm'].forEach(id => {
+      const b = document.getElementById(id);
+      if (!b) return;
+      const isBG = id.includes('bg');
+      b.classList.toggle('active', (isBG && l==='bg') || (!isBG && l==='en'));
+    });
+  }
+
+  // Init BG placeholders
+  document.querySelectorAll('[data-bg-ph]').forEach(el => { el.placeholder = el.dataset.bgPh; });
+
+  // ── Navbar shadow on scroll ───────────────────────────────
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 20
+      ? '0 1px 18px rgba(26,24,20,0.09)'
+      : 'none';
+  }, { passive: true });
+
+  // ── Mobile menu ───────────────────────────────────────────
+  function toggleMenu() {
+    const m = document.getElementById('mmenu');
+    const h = document.getElementById('ham');
+    const open = m.classList.toggle('open');
+    h.setAttribute('aria-expanded', open);
+    h.classList.toggle('open', open);
+  }
+
+  // Close menu when tapping outside
+  document.addEventListener('click', function(e) {
+    const m = document.getElementById('mmenu');
+    const nav = document.getElementById('navbar');
+    if (m.classList.contains('open') && !nav.contains(e.target)) {
+      m.classList.remove('open');
+      const h = document.getElementById('ham');
+      h.setAttribute('aria-expanded', 'false');
+      h.classList.remove('open');
+    }
+  });
+
+  // ── Scroll reveal ─────────────────────────────────────────
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.rev').forEach(el => io.observe(el));
+
+  // ── Contact form ──────────────────────────────────────────
+  function handleForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submit-btn');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg><span>' + (lang==='bg'?'Изпратено!':'Sent!') + '</span>';
+    btn.style.background = '#4D7C5F';
+    setTimeout(() => { btn.innerHTML = orig; btn.style.background = ''; e.target.reset(); }, 3200);
+  }
+
+  // ── FAQ accordion ─────────────────────────────────────────
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const answer = item.querySelector('.faq-a');
+    const chevron = btn.querySelector('.faq-chevron');
+    const isOpen = answer.style.display !== 'none';
+    // Close all
+    document.querySelectorAll('.faq-item').forEach(fi => {
+      fi.querySelector('.faq-a').style.display = 'none';
+      fi.querySelector('.faq-chevron').style.transform = 'rotate(0deg)';
+    });
+    if (!isOpen) {
+      answer.style.display = 'block';
+      chevron.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  // ── URL lang param ────────────────────────────────────────
+  const urlLang = new URLSearchParams(location.search).get('lang');
+  if (urlLang === 'en') setLang('en');
+</script>
+
+</body>
+</html>
