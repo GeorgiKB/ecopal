@@ -15,10 +15,10 @@
 
   <!-- Products -->
   <url>
-    <loc>https://www.ecopal-bg.com/products.html</loc>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/products.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/products.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/products.html"/>
+    <loc>https://www.ecopal-bg.com/products/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/products/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/products/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/products/"/>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -26,10 +26,10 @@
 
   <!-- Advantages -->
   <url>
-    <loc>https://www.ecopal-bg.com/advantages.html</loc>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/advantages.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/advantages.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/advantages.html"/>
+    <loc>https://www.ecopal-bg.com/advantages/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/advantages/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/advantages/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/advantages/"/>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -37,10 +37,10 @@
 
   <!-- About -->
   <url>
-    <loc>https://www.ecopal-bg.com/about.html</loc>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/about.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/about.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/about.html"/>
+    <loc>https://www.ecopal-bg.com/about/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/about/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/about/"/>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -48,10 +48,10 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://www.ecopal-bg.com/contact.html</loc>
-    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/contact.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/contact.html?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/contact.html"/>
+    <loc>https://www.ecopal-bg.com/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://www.ecopal-bg.com/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.ecopal-bg.com/contact/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ecopal-bg.com/contact/"/>
     <lastmod>2026-03-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
